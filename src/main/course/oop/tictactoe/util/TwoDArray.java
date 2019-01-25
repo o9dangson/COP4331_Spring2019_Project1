@@ -55,7 +55,18 @@ public class TwoDArray {
 		 * Note: Print the int value in place of (). 
 		 * e.g., replace (val) with val.
 		 */
-		return "Not implemented";
+		String message = "";
+		if(val == defaultV) {
+			message = "Failure: " + val + " is not allowed.";
+		}
+		else if(myArray[row][col] == defaultV) {
+			myArray[row][col] = val;
+			message = "Success! " + val + " was inserted.";
+		}
+		else if(myArray[row][col] != defaultV) {
+			message = "Failure: " + row + ", " + col + " is not empty.";
+		}
+		return message;
 	}
 	
 	public int getInt(int row, int col) {
@@ -63,7 +74,7 @@ public class TwoDArray {
 		 * 
 		 */
 		
-		return 0;
+		return myArray[row][col];
 	}
 	
 	public String getArrayDisplay() {
