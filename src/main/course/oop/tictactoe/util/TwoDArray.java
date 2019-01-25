@@ -9,20 +9,36 @@ package main.course.oop.tictactoe.util;
  *
  */
 public class TwoDArray {
-	
+	public int [][] myArray;
+	public int rCount;
+	public int cCount;
+	public int defaultV;
 	
 	public TwoDArray(int rows, int cols, int defaultVal){
 		/*TODO - Create a 2D integer array consisting of 
 		 * the number of rows and columns given. Initialize 
 		 * the array by setting each int to be the defaulVal. 
 		 * */
+		myArray = new int [rows][cols];
+		rCount = rows;
+		cCount = cols;
+		defaultV = defaultVal;
+		for(int i=0;i<rows;i++) {
+			for(int j=0;j<cols;j++) {
+				myArray[i][j] = defaultVal;
+			}
+		}
 	}
 	
 	public void initArray(int defaultVal) {
 		/*TODO - (Re)Initialize the array by 
 		 * setting each int to be the defaulVal 
 		 */
-		
+		for(int i=0;i<rCount;i++) {
+			for(int j=0;j<cCount;j++) {
+				myArray[i][j] = defaultVal;
+			}
+		}
 	}
 	
 	public String insertInt(int row, int col, int val) {
